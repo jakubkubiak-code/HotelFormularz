@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularze</title>
+</head>
+<body>
+    <header>
+        <h1>Formularz Opinii o Hotelu</h1>
+        <p>Dziękujemy za pobyt u nas. Prosimy o opinię na temat Twojego ostatniego pobytu.</p>
+    </header>
+    <main>
+        <form action="https://hotel-feedback.freecodecamp.org" method="POST">
+            <fieldset>
+                <legend>Informacje osobiste</legend>
+                <label for="full-name">Imię i nazwisko (wymagane):</label>
+                <input type="text" id="full-name" name="name" placeholder="np. Jan Kowalski" required size="20">
+                <label for="email">Adres email (wymagane):</label>
+                <input type="email" name="email" id="email" required placeholder="jankowalski@email.com" size="20">
+                <label for="age">Wiek (opcjonalnie):</label>
+                <input type="number" name="age" id="age" min="3" max="100">
+                <fieldset>
+                    <legend>Czy to była Twoja pierwsza wizyta w naszym hotelu?</legend>
+                    <label for="yes-option">Tak</label>
+                    <input type="radio" name="hotel-stay" id="yes-option">
+                    <label for="no-option">Nie</label>
+                    <input type="radio" name="hotel-stay" id="no-option">
+                </fieldset>
+                <fieldset>
+                    <legend>Dlaczego zdecydowałeś się zatrzymać w naszym hotelu? (Zaznacz wszystkie odpowiedzi, które pasują)</legend>
+                    <label for="ads">Reklamy w mediach społecznościowych</label>
+                    <input type="checkbox" name="ads" id="ads" for="ads" value="ads">
+                    <label for="recommendation">Osobista rekomendacja</label>
+                    <input type="checkbox" name="recommendation" id="recommendation" value="recommendation">
+                    <label for="location">Lokalizacja</label>
+                    <input type="checkbox" name="location" id="location" value="location">
+                    <label for="reputation">Reputacja</label>
+                    <input type="checkbox" name="reputation" id="reputation" value="reputation" checked>
+                    <label for="price">Cena</label>
+                    <input type="checkbox" name="price" id="price" value="price">
+                </fieldset>
+                <fieldset>
+                    <legend>Oceny</legend>
+                    <label for="service">Jaka była obsługa?</label>
+                    <select name="service" id="service"></select>
+                </fieldset>
+            </fieldset>
+        </form>
+    </main>
+</body>
+</html>
